@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Votação";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            Usuário: <input type="text" id="userInput" />
+        </div>
+        <div class="col-6">&nbsp;</div>
+    </div>
+    <div class="row">Votação: Qual o seu canal favorito no Youtube?&nbsp;</div>
+    <div class="row">
+        <div class="col-12">
+            <!-- input type="radio" name="group1" id="r1" value="1" /><label for="r1"> button one</label>-->
+
+            <input type="radio" name="myChannel" id="opcao1" value="Opção 1" />
+            <label for="opcao1">Opção 1</label>
+            <br /><span id="opcao1Block"></span><br />
+            <input type="radio" name="myChannel" id="opcao2" value="Opção 2" />
+            <label for="opcao2">Opção 2</label>
+            <br /><span id="opcao2Block"></span><br />
+            <input type="radio" name="myChannel" id="naoPossui" value="Eu não possuo nenhuma opção" />
+            <label for="captainMe">Não possuo nenhuma opção.</label>
+            <br /><span id="naoPossuiBlock"></span><br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <input type="button" id="sendButton" value="Vote Now" />
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/poll.js"></script>
+
